@@ -11,7 +11,7 @@ const Hero = () => {
             Hey There
           </h4>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-serif mt-2">
-            I'm <span className="text-rose-500">Francis</span>
+            I&apos;m <span className="text-rose-500">Francis</span>
           </h1>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold font-serif">Awiti</h1>
           <h4 className="text-rose-500 mt-4 text-md sm:text-xl md:text-2xl">
