@@ -9,7 +9,6 @@ export const Hero = () => {
   useEffect(() => {
     const typed = new Typed(".typing", {
       strings: [
-        "",
         "FullStack Developer,",
         "Frontend Developer,",
         "Backend Developer,",
@@ -26,52 +25,51 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen bg-[#111827] dark:bg-[#111827] flex justify-center items-center">
+    <div className="w-full h-screen bg-[#111827] flex justify-center items-center mt-16">
       {/* Hero Section */}
-      <div className="h-full w-full mx-auto xl:px-16 px-8 flex md:flex-row flex-col gap-4 justify-center items-center ">
+      <div className="h-full w-full max-w-7xl mx-auto px-5 sm:px-10 flex flex-col md:flex-row items-center justify-center gap-8">
         {/* Profile Image */}
-        <div className="w-full relative flex justify-center lg:mt-0 md:mt-12">
-          <Image
-            src="/images/heroimages.png"
-            alt="My Image"
-            width={300}
-            height={300}
-            className="shadow-2xl shadow-rose-600 animate-[spin_12s_linear_infinite] absolute rounded-full lg:max-w-[70%] max-w-[60%]"
-          /> 
-          <Image
-            src="/images/heroimages.png"
-            alt="My Image"
-            width={300}
-            height={300}
-            className="relative z-10 rounded-full lg:max-w-[70%] max-w-[60%] outline outline-[.7rem] outline-offset-[.1rem] outline-rose-400/30"
-          />
+        <div className="relative flex justify-center md:w-1/2 w-full">
+          <div className="relative">
+            <Image
+              src="/images/heroimages.png"
+              alt="My Image"
+              width={250}
+              height={250}
+              className="shadow-2xl shadow-rose-600 animate-[spin_12s_linear_infinite] absolute rounded-full md:max-w-[75%] max-w-[65%]"
+            />
+            <Image
+              src="/images/heroimages.png"
+              alt="My Image"
+              width={250}
+              height={250}
+              className="relative z-10 rounded-full md:max-w-[75%] max-w-[65%] outline outline-[.5rem] outline-offset-[.1rem] outline-rose-400/30"
+            />
+          </div>
         </div>
 
-        {/* Hero Text */} 
-        <div className="w-full flex flex-col justify-center gap-4 md:text-left text-center text-white dark:text-gray-800">
-          <h1 className="md:text-3xlm lg:text-5xl lg:mt-0 sm:text-3xl text-3xl font-semibold font-serif text-white mt-4 md:mt-14">
-            Hello, My name is Francis Awiti
+        {/* Hero Text */}
+        <div className="md:w-1/2 w-full flex flex-col justify-center text-center md:text-left text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold font-serif text-white">
+            Hello, My name is <br className="sm:hidden" /> Francis Awiti
           </h1>
-          <h3 className="capitalize text-rose-400 text-2xl">
+          <h3 className="capitalize text-rose-400 text-lg sm:text-xl md:text-2xl mt-2">
             I&apos;m{" "}
-            <span className="typing text-green-500 dark:text-green-700 text-2xl">
-              Fullstack Developer
-            </span>
+            <span className="typing text-green-500 text-lg sm:text-xl md:text-2xl"></span>
           </h3>
-          <p className="text-2xl text-white">
+          <p className="text-sm sm:text-lg md:text-xl text-white mt-2">
             Experienced full-stack developer with 5+ years of expertise in
-            JavaScript, React.js, Next.js, Node.js, Nest.js, PostgreSQL and
-            MSSQL Server.
+            JavaScript, React.js, Next.js, Node.js, Nest.js, PostgreSQL, and MSSQL Server.
           </p>
-          <div className="sm:mt-4 lg:mt-2 mt-2 md:mb-5 md:mt-1 flex flex-col sm:flex-row gap-3">
+          <div className="mt-4 flex flex-col sm:flex-row gap-3">
             <Link href="mailto:aetortech@gmail.com" target="_blank">
-              <button className="px-6 py-2 bg-rose-500 text-white rounded-sm hover:bg-rose-600 transition">
+              <button className="px-5 py-2 bg-rose-500 text-white rounded-sm hover:bg-rose-600 transition text-sm sm:text-base">
                 Hire Me
               </button>
             </Link>
 
-            <Link href="/images/cv.pdf" download="My_CV.pdf" target="_blank" >
-              <button className="px-6 py-2 bg-green-700 hover:bg-green-800 rounded text-white font-bold">
+            <Link href="/images/cv.pdf" download="My_CV.pdf" target="_blank">
+              <button className="px-5 py-2 bg-green-700 hover:bg-green-800 rounded text-white font-bold text-sm sm:text-base">
                 Download CV
               </button>
             </Link>
