@@ -28,7 +28,7 @@ export const MobileNavbar: React.FC<MobileNavbarProps> = ({ onClose, activeItem,
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <motion.nav
-        className="bg-gray-700 text-white w-4/5 max-w-sm h-full py-6 px-6 shadow-lg flex flex-col"
+        className="bg-[#111827] text-white w-4/5 max-w-sm h-full py-6 px-6 shadow-lg flex flex-col"
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}

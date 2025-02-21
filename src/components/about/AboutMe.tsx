@@ -1,8 +1,21 @@
+"use client"
+import { useState } from "react";
 import Link from "next/link";
 import { Education } from "./Education";
 import { Experience } from "./Expirence";
 
 export const AboutMe = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleDownload = () => {
+    setLoading(true);
+
+    // Simulate a delay for a better user experience
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust time as needed
+  };
+
   return (
     <>
       <div className="w-full min-h-screen flex items-center bg-[#111827] text-white px-6 lg:px-0 pt-20 overflow-y-auto">
@@ -69,18 +82,33 @@ export const AboutMe = () => {
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-4 justify-center sm:justify-start">
-                <Link href="mailto:aetortech@gmail.com" target="_blank" >
+              {/* <div className="flex gap-4 justify-center sm:justify-start">
+                <Link href="mailto:aetortech@gmail.com" target="_blank">
                   <button className="px-6 py-2 bg-rose-500 text-white rounded-sm hover:bg-rose-600 transition">
                     Hire Me
                   </button>
                 </Link>
-                <Link href="/images/cv.pdf" download="My_CV.pdf" target="_blank">
-                  <button className="px-6 py-2 bg-green-700 hover:bg-green-800 rounded text-white font-bold">
-                    Download CV
+                <Link
+                  href="/images/cv.pdf"
+                  download="My_CV.pdf"
+                  target="_blank"
+                >
+                  <button
+                    onClick={handleDownload}
+                    disabled={loading}
+                    className="px-5 py-2 bg-green-700 hover:bg-green-800 rounded text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition disabled:bg-gray-500"
+                  >
+                    {loading ? (
+                      <>
+                        <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-white"></div>
+                        Downloading...
+                      </>
+                    ) : (
+                      "Download CV"
+                    )}
                   </button>
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             {/* Skills & Progress Bars */}

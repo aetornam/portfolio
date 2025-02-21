@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Typed from "typed.js";
 import Link from "next/link";
 
 export const Hero = () => {
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const typed = new Typed(".typing", {
       strings: [
@@ -24,28 +26,35 @@ export const Hero = () => {
     };
   }, []);
 
+  const handleDownload = () => {
+    setLoading(true);
+
+    // Simulate a delay for a better user experience
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust time as needed
+  };
+
   return (
     <div className="w-full h-screen bg-[#111827] flex justify-center items-center mt-16">
       {/* Hero Section */}
       <div className="h-full w-full max-w-7xl mx-auto px-5 sm:px-10 flex flex-col md:flex-row items-center justify-center gap-8">
         {/* Profile Image */}
         <div className="relative flex justify-center md:w-1/2 w-full">
-          
-            <Image
-              src="/images/heroimages.png"
-              alt="My Image"
-              width={250}
-              height={250}
-              className="shadow-2xl shadow-rose-600 animate-[spin_12s_linear_infinite] absolute rounded-full md:max-w-[75%] max-w-[65%]"
-            />
-            <Image
-              src="/images/heroimages.png"
-              alt="My Image"
-              width={250}
-              height={250}
-              className="relative z-10 rounded-full md:max-w-[75%] max-w-[65%] outline outline-[.5rem] outline-offset-[.1rem] outline-rose-400/30"
-            />
-         
+          <Image
+            src="/images/heroimages.png"
+            alt="My Image"
+            width={250}
+            height={250}
+            className="shadow-2xl shadow-rose-600 animate-[spin_12s_linear_infinite] absolute rounded-full md:max-w-[75%] max-w-[65%]"
+          />
+          <Image
+            src="/images/heroimages.png"
+            alt="My Image"
+            width={250}
+            height={250}
+            className="relative z-10 rounded-full md:max-w-[75%] max-w-[65%] outline outline-[.5rem] outline-offset-[.1rem] outline-rose-400/30"
+          />
         </div>
 
         {/* Hero Text */}
@@ -59,21 +68,34 @@ export const Hero = () => {
           </h3>
           <p className="text-sm sm:text-lg md:text-xl text-white mt-2">
             Experienced full-stack developer with 5+ years of expertise in
-            JavaScript, React.js, Next.js, Node.js, Nest.js, PostgreSQL, and MSSQL Server.
+            JavaScript, React.js, Next.js, Node.js, Nest.js, PostgreSQL, and
+            MSSQL Server.
           </p>
-          <div className="mt-4 flex flex-col sm:flex-row gap-3">
-            <Link href="mailto:aetortech@gmail.com" target="_blank">
-              <button className="px-5 py-2 bg-rose-500 text-white rounded-sm hover:bg-rose-600 transition text-sm sm:text-base">
-                Hire Me
-              </button>
-            </Link>
+          <div className="mt-4 flex flex-col sm:flex-row gap-3 items-center sm:items-start justify-center sm:justify-start">
+  <Link href="mailto:aetortech@gmail.com" target="_blank">
+    <button className="px-5 py-2 bg-rose-500 text-white rounded-sm hover:bg-rose-600 transition text-sm sm:text-base">
+      Hire Me
+    </button>
+  </Link>
 
-            <Link href="/images/cv.pdf" download="My_CV.pdf" target="_blank">
-              <button className="px-5 py-2 bg-green-700 hover:bg-green-800 rounded text-white font-bold text-sm sm:text-base">
-                Download CV
-              </button>
-            </Link>
-          </div>
+  <Link href="/images/cv.pdf" download="My_CV.pdf" target="_blank">
+    <button
+      onClick={handleDownload}
+      disabled={loading}
+      className="px-5 py-2 bg-green-700 hover:bg-green-800 rounded text-white font-bold text-sm sm:text-base flex items-center justify-center gap-2 transition disabled:bg-gray-500"
+    >
+      {loading ? (
+        <>
+          <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-white"></div>
+          Downloading...
+        </>
+      ) : (
+        "Download CV"
+      )}
+    </button>
+  </Link>
+</div>
+
         </div>
       </div>
     </div>
