@@ -5,16 +5,16 @@ import { Education } from "./Education";
 import { Experience } from "./Expirence";
 
 export const AboutMe = () => {
-  const [loading, setLoading] = useState(false);
+//   const [loading, setLoading] = useState(false);
 
-  const handleDownload = () => {
-    setLoading(true);
+//   const handleDownload = () => {
+//     setLoading(true);
 
-    // Simulate a delay for a better user experience
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Adjust time as needed
-  };
+//     // Simulate a delay for a better user experience
+//     setTimeout(() => {
+//       setLoading(false);
+//     }, 3000); // Adjust time as needed
+//   };
 
   return (
     <>
