@@ -68,11 +68,17 @@ export const MobileNavbar: React.FC<MobileNavbarProps> = ({ onClose, activeItem,
         {/* Footer - Social Media Icons */}
         <div className="mt-auto">
           <div className="flex justify-between mt-6">
-            {[Facebook, Instagram, Github, Linkedin, TwitterX].map((Icon, index) => (
-              <a key={index} href="#" className="text-white text-2xl hover:text-gray-300">
+          {socialLinks.map(({ Icon, url }, index) => (
+            <Link key={index} href={url} target="_blank" rel="noopener noreferrer" passHref>
+              <motion.span
+                className="text-white text-2xl hover:text-gray-300 cursor-pointer"
+                whileHover={{ scale: 1.2 }}
+                transition={{ duration: 0.3 }}
+              >
                 <Icon />
-              </a>
-            ))}
+              </motion.span>
+            </Link>
+          ))}
           </div>
         </div>
       </motion.nav>
