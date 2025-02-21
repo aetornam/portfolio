@@ -1,6 +1,5 @@
 "use client"
-import { useState } from "react";
-import Link from "next/link";
+
 import { Education } from "./Education";
 import { Experience } from "./Expirence";
 
