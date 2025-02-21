@@ -20,7 +20,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-2 flex justify-between items-center bg-gray-700/60">
+      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-2 flex justify-between items-center bg-gray-700">
         
         {/* Left Menu */}
         <div className="hidden lg:flex items-center space-x-6">

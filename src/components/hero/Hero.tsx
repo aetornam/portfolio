@@ -30,7 +30,7 @@ export const Hero = () => {
       <div className="h-full w-full max-w-7xl mx-auto px-5 sm:px-10 flex flex-col md:flex-row items-center justify-center gap-8">
         {/* Profile Image */}
         <div className="relative flex justify-center md:w-1/2 w-full">
-          <div className="relative">
+          
             <Image
               src="/images/heroimages.png"
               alt="My Image"
@@ -45,7 +45,7 @@ export const Hero = () => {
               height={250}
               className="relative z-10 rounded-full md:max-w-[75%] max-w-[65%] outline outline-[.5rem] outline-offset-[.1rem] outline-rose-400/30"
             />
-          </div>
+         
         </div>
 
         {/* Hero Text */}
