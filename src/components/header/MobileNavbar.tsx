@@ -12,6 +12,13 @@ interface MobileNavbarProps {
 }
 
 export const MobileNavbar: React.FC<MobileNavbarProps> = ({ onClose, activeItem, setActiveItem }) => {
+    const socialLinks = [
+        { Icon: Facebook, url: "https://facebook.com/your-profile" },
+        { Icon: Instagram, url: "https://instagram.com/your-profile" },
+        { Icon: Github, url: "https://github.com/aetornam" },
+        { Icon: Linkedin, url: "https://www.linkedin.com/in/francis-awiti-203778213/" },
+        { Icon: TwitterX, url: "https://twitter.com/your-profile" }, // X (Twitter)
+      ];
   return (
     <motion.div
       className="fixed z-50 inset-0 bg-gray-800 bg-opacity-50 flex justify-end"
@@ -21,7 +28,7 @@ export const MobileNavbar: React.FC<MobileNavbarProps> = ({ onClose, activeItem,
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <motion.nav
-        className="bg-[#192F6E] text-white w-4/5 max-w-sm h-full py-6 px-6 shadow-lg flex flex-col"
+        className="bg-gray-700 text-white w-4/5 max-w-sm h-full py-6 px-6 shadow-lg flex flex-col"
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
         exit={{ x: "100%" }}

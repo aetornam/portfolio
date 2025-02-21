@@ -10,9 +10,18 @@ export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeItem, setActiveItem] = useState("/"); // Track active menu item
 
+  const socialLinks = [
+    { Icon: Facebook, url: "https://facebook.com/your-profile" },
+    { Icon: Instagram, url: "https://instagram.com/your-profile" },
+    { Icon: Github, url: "https://github.com/aetornam" },
+    { Icon: Linkedin, url: "https://www.linkedin.com/in/francis-awiti-203778213/" },
+    { Icon: X, url: "https://twitter.com/your-profile" }, // X (Twitter)
+  ];
+
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-2 flex justify-between items-center bg-[#192F6E] border-b-2 border-gray-600">
+      <nav className="fixed top-0 left-0 w-full z-50 px-6 py-2 flex justify-between items-center bg-gray-700/60">
+        
         {/* Left Menu */}
         <div className="hidden lg:flex items-center space-x-6">
           {[
@@ -53,8 +62,8 @@ export const Navbar: React.FC = () => {
 
         {/* Right Social Media Icons */}
         <div className="hidden lg:flex items-center space-x-4">
-          {[Facebook, Instagram, Github, Linkedin, X].map((Icon, index) => (
-            <Link key={index} href="#" passHref>
+          {socialLinks.map(({ Icon, url }, index) => (
+            <Link key={index} href={url} target="_blank" rel="noopener noreferrer" passHref>
               <motion.span
                 className="text-white text-2xl hover:text-gray-300 cursor-pointer"
                 whileHover={{ scale: 1.2 }}

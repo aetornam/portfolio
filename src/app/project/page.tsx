@@ -1,7 +1,8 @@
+import { Projects } from "@/components/project/Project";
 
 
 export default function Project() {
   return (
-    <div>Project</div>
+    <Projects />
   ); 
 }

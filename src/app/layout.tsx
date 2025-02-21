@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { PageTransition } from "@/components/animations/PageTransition";
 import "./globals.css";
+import { Footer } from "@/components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +27,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar />
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiasedm`}>
+      <Navbar />
         <AnimatePresence mode="wait">
           <PageTransition key={pathname}>{children}</PageTransition>
         </AnimatePresence>
+        <Footer />
       </body>
     </html>
   );
