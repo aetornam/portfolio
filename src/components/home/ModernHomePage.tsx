@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Typed from "typed.js";
 import Link from "next/link";
@@ -21,7 +21,7 @@ interface Service {
   id: number;
   title: string;
   description: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
   color: string;
 }
 
