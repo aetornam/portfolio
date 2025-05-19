@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Facebook, Github, Instagram, Linkedin, X as TwitterX, Close } from "@/components/icons";
+import { Github, Instagram, Linkedin, X as TwitterX, Close } from "@/components/icons";
 
 interface MobileNavbarProps {
   onClose: () => void;

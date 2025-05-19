@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Facebook, Github, Instagram, Linkedin, Menu, X } from "@/components/icons";
+import { Github, Instagram, Linkedin, Menu, X } from "@/components/icons";
 import { MobileNavbar } from "./MobileNavbar";
 import { usePathname } from "next/navigation";
 

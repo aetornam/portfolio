@@ -52,7 +52,6 @@ export const AboutMe = () => {
   const getFrontendTech = () => techStack.filter(tech => tech.category === "frontend");
   const getBackendTech = () => techStack.filter(tech => tech.category === "backend");
   const getDatabaseTech = () => techStack.filter(tech => tech.category === "database");
-  const getOtherTech = () => techStack.filter(tech => tech.category === "other");
 
   // Animation variants
   const containerVariants = {
@@ -207,7 +206,7 @@ export const AboutMe = () => {
                     </p>
                     <p className="text-gray-300 leading-relaxed mb-6">
                       My core expertise includes TypeScript, JavaScript, React.js, Next.js, Node.js, and Express.js for building
-                      full-stack applications. I'm also proficient with database technologies including PostgreSQL, MongoDB, and
+                      full-stack applications. I&apos;m also proficient with database technologies including PostgreSQL, MongoDB, and
                       MSSQL Server.
                     </p>
                     <p className="text-gray-300 leading-relaxed">

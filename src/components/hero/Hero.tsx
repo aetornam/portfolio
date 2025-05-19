@@ -119,7 +119,7 @@ export const Hero = () => {
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 tracking-tight"
                 variants={itemVariants}
               >
-                <span className="text-white">Hello, I'm </span>
+                <span className="text-white">Hello, I&apos;m </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-indigo-500">
                   Francis Awiti
                 </span>
@@ -129,7 +129,7 @@ export const Hero = () => {
                 className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-300 mb-6"
                 variants={itemVariants}
               >
-                <span>I'm a </span>
+                <span>I&apos;m a </span>
                 <span
                   ref={typedElementRef}
                   className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-indigo-500 font-semibold"
