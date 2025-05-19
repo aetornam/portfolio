@@ -1,7 +1,7 @@
-import {Hero} from "@/components/hero/Hero";
+import { ModernHomePage } from "@/components/home/ModernHomePage";
 
 export default function Home() {
   return (
-    <Hero />
-  ); 
+    <ModernHomePage />
+  );
 }
